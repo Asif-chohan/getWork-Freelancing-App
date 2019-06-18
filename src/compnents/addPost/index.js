@@ -44,12 +44,12 @@ class AddPost extends Component {
     const record = {
       title: this.state.title,
       desc: this.state.desc,
-      createdAt: new Date()
+      createdAt: new Date().toString()
     };
-    this.props.addPost(record);
     console.log("==============record======================");
     console.log(record);
     console.log("====================================");
+    this.props.addPost(record);
   };
 
   componentWillReceiveProps(nextProps) {

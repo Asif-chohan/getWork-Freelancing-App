@@ -8,6 +8,7 @@ import Forget from "./compnents/forget";
 import How_its_works from "./compnents/how_its_works";
 import { connect } from "react-redux";
 import addPost from "./compnents/addPost";
+import ShowPost from './compnents/ShowPost'
 
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 
@@ -55,6 +56,12 @@ class App extends Component {
               exact
               path="/addPost"
               component={addPost}
+              userStatus={userStatus}
+            />
+            <RestrictedRoute
+              exact
+              path="/showpost"
+              component={ShowPost}
               userStatus={userStatus}
             />
           </Switch>

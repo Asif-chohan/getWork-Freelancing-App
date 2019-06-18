@@ -82,12 +82,7 @@ export function startLogout(data) {
   return dispatch => {
     auth.signOut().then(
       function() {
-        try {
-          localStorage.setItem("currentApp", "nill");
-        } catch (error) {
-          console.log("err", error);
-          // Error saving data
-        }
+       
         toastr.success("Successfully Logout");
 
         dispatch({
